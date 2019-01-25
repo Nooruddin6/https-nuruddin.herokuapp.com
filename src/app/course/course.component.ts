@@ -80,7 +80,7 @@ export class CourseComponent  implements OnInit {
         saveCourse()
         {
          this.courseservice.readData(this.data);
-         console.log(v);
+        
         }
         
   
