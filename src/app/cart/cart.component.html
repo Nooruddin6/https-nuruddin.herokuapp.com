@@ -1,0 +1,30 @@
+
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 mt-5 bg-info">
+        <h1 class="text-center">CART</h1>
+       <table class="table table-striped">
+         <thead>
+
+             <th><b>Sno</b></th>
+             <th><b>Course-Id</b></th>
+             <th><b>Course-Name</b></th>
+             <th><b>Cost</b></th>
+             
+         </thead>
+         <tr *ngFor="let i of cart">
+             <td>{{i.sno}}</td>
+             <td>{{i.courseid}}</td>
+             <td>{{i.coursename}}</td>
+             <td>{{i.cost}}</td>
+         </tr>
+                    
+       </table>
+
+
+    </div>
+    <div class="col-sm-4"></div>
+</div>
+
+
+

@@ -1,0 +1,33 @@
+[
+    {
+        "personid":100,
+        "name":"likhitha",
+        "email":"matetilikhitha02@gmailcom",
+        "contactno":9000428346
+
+    },
+
+    {
+        "personid":200,
+        "name":"mounika",
+        "email":"mounika02@gmailcom",
+        "contactno":7993308044
+
+    },
+
+    {
+        "personid":300,
+        "name":"rohith",
+        "email":"matetirohith02@gmailcom",
+        "contactno":9000465644
+
+    },
+
+    {
+        "personid":400,
+        "name":"rithika",
+        "email":"rithika02@gmailcom",
+        "contactno":9876543210
+
+    }
+]

@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="jumbotron ">
+    <div class="row mx-auto">
+         <input type="text" name="search" placeholder="searchHere" [(ngModel)]="searchTerm">
+    </div>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 bg-info">
+        <h1 class="text-center"><b>Customers</b></h1>
+      <table class="table table-striped">
+        <thead>
+          
+          <th><b>Name</b></th>
+          <th><b>Email</b></th>
+          <th><b>Date-Of-Birth</b></th>
+          <th><b>Contactno</b></th>
+         
+        </thead>
+        <tr *ngFor="let i of data | search:searchTerm">
+         
+          <td>{{i.name}}</td>
+          <td>{{i.email}}</td>
+          <td>{{i.dateofbirth}}</td>
+          <td>{{i.contactno}}</td>
+
+        </tr>
+      </table>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+</div>
+</div>

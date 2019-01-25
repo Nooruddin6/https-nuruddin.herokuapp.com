@@ -1,0 +1,69 @@
+<!-- registration form -->
+
+
+<div class="row" style="background-image:url('assets/px1.jpeg')">
+
+    <div class="col-sm-4"></div>
+
+
+    <div class="col-sm-4">
+
+        <h1 class="mx-auto">Register</h1>
+  <form #formref="ngForm" (ngSubmit)="submit(formref.value)">
+
+  <div class="form-group">
+     <label><b>Name:</b></label>
+     <input type="text" name="name" id="a" #ref1="ngModel" [(ngModel)]="name"  required class="form-control">
+     <label *ngIf="ref1.touched && ref1.errors?.required" class="text-danger">
+         Name is mandatory
+     </label>
+  </div>
+
+  <div class="form-group">
+     <label><b>Email:</b></label>
+     <input type="text" name="email" id="b" #ref2="ngModel" [(ngModel)]="email" class="form-control">
+  </div> 
+
+  <div class="form-group">
+     <label><b>Password:</b></label>
+     <input type="text" name="password" id="c" #ref3="ngModel"  [(ngModel)]="password" pattern="[A-Z]\d." minlength="6" class="form-control">
+     <label *ngIf="ref3.errors?.pattern && ref3.invalid"><p>First letter is capital</p>
+            <p>second letter is number</p>
+           <p>remaining as your wish</p>
+     </label>
+  </div>
+
+  <div class="form-group">
+     <label><b>ConfirmPassword:</b></label>
+     <input type="text" name="confirmpassword" #ref4="ngModel" [(ngModel)]="confirmpassword" pattern="[A-Z]\d." class="form-control">
+  </div>
+
+  <div class="form-group">
+     <label><b>ContactNumber:</b></label>
+     <input type="text" name="contactno" pattern="[0-9]"   #ref5="ngModel" [(ngModel)]="contactno"   maxlength="10" class="form-control">
+  </div>
+
+  <div class="form-group">
+     <label><b>Date.Of.Birth:</b></label>
+     <input type="date" name="dateofbirth"  #ref6="ngModel" [(ngModel)]="dateofbirth" class="form-control">
+  </div>
+
+  <label><b>Gender:</b></label>
+
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="radio" name="gender" [(ngModel)]="gender" value="male" class="form-check-input"><b>Male</b>
+      </label>
+  </div> 
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="radio" name="gender"  [(ngModel)]="gender" value="female" class="form-check-input"><b>Female</b>
+    </label>
+  </div>  
+  <button type="submit" class="btn btn-success mt-2"><b>Submit</b></button>              
+   </form>
+</div>
+
+    <div class="col-sm-4"></div>
+
+</div>

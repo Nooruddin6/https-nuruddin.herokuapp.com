@@ -1,0 +1,20 @@
+[
+    {
+     "sno":1,
+     "courseid":121,
+     "coursename":"c",
+     "cost":1000
+    },
+    {
+     "sno":2,
+     "courseid":122,
+     "coursename":"c++",
+     "cost":1000
+    },
+    {
+     "sno":3,
+     "courseid":123,
+     "coursename":"java",
+     "cost":1000
+    }
+]

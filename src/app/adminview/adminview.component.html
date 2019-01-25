@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-sm bg-dark">
+
+    <button type="button" class="navbar-toggler" data-target="#x" data-toggle="collapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+<div class="collapse navbar-collapse" id="x">
+  <ul class="navbar-nav">
+     <li><a routerLink="adminview" class="navbar-brand" href=""><b>Logo</b></a></li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="course"><b>Course</b></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="purchases"><b>Purchases</b></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="customers"><b>Customers</b></a>
+    </li>
+    <a routerLink="">
+    <button type="button" style="margin-left:400px;" class="btn btn-success"><b>Logout</b></button>
+    </a>
+  </ul>
+</div> 
+</nav>
+<router-outlet></router-outlet>

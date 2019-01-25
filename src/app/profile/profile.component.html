@@ -1,0 +1,74 @@
+<div class="container">
+     <h1 class="text-center"><b>Profile</b></h1>
+    <img src="assets/baby.jpeg" height="200px" width="200px" class="rounded-circle mx-auto d-block">
+    
+    <div class="row">
+  
+  <div class="col-sm-4"></div>
+
+  <div class="col-sm-4 pt-4">
+<table>
+        <tr *ngFor="let i of data">
+         <td><b>Name:</b></td>
+          <td>{{i.name}}</td> 
+        </tr>
+
+        <tr *ngFor="let i of data">
+          <td><b>Email:</b></td> 
+          <td>{{i.email}}</td>
+        </tr>
+
+        <tr *ngFor="let i of data" >
+          <td><b>DateOfBirth:</b></td>
+          <td>{{i.dateofbirth}}</td>
+        </tr>
+
+        <tr *ngFor="let i of data">
+          <td><b>ContactNo:</b></td>
+          <td>{{i.contactno}}</td>  
+        </tr><br/>
+        <tr *ngFor="let i of data">
+          <button type="button" data-target="#x" data-toggle="modal" (click)="editProfile(i)"   class="btn btn-success">UpdateProfile</button>
+        </tr>
+
+        <div class="modal"  id="x">
+            <div class="modal-dialog">
+              <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">X</button>
+              </div>
+        
+                
+                <div class="modal-body">
+                    <form #ref1="ngForm" >
+                       <label><b>Name:</b></label>
+                       <input type="text" name="name" class="form-control" [(ngModel)]="profiledata.name">
+        
+                       <label><b>Email:</b></label>
+                       <input type="text" name="email" class="form-control" [(ngModel)]="profiledata.email" >
+        
+                       <label><b>DateOfBirth:</b></label>
+                       <input type="text" name="dateofbirth" class="form-control" [(ngModel)]="profiledata.dateofbirth" >
+        
+                       <label><b>ContactNo:</b></label>
+                       <input type="text" name="contactno" class="form-control"  [(ngModel)]="profiledata.contactno">
+        
+                       <button type="submit" class="btn btn-success mt-5 float-right"   data-dismiss="modal" (click)="saveProfile()">Save</button>
+        
+                       </form>
+                </div>
+              </div>
+        
+              
+            </div>
+          </div>
+    
+      </table>
+        
+  
+  </div>
+
+  
+  <div class="col-sm-4"></div>
+</div>
+</div>
