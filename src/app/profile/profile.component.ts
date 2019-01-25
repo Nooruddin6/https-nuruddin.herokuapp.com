@@ -18,9 +18,9 @@ dateofbirth:any;
 contactno:number;
 
  
-  data:object;
+  data:any={};
     
-  profiledata:any[]=[];
+  profiledata:any={};
 
   constructor(private profile:ProfileService) { }
 

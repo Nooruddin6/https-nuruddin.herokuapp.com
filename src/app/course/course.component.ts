@@ -16,7 +16,7 @@ export class CourseComponent  implements OnInit {
 
     coursename:string;
     coursedetails:string;
-    courseauthor:string;
+    authorname:string;
     authordetails:string;
     authorimage:any;
     price:string;
@@ -25,11 +25,11 @@ export class CourseComponent  implements OnInit {
     mainfile:any;
 
     
-    data:object={};
+    data:any={};
 
     coursedata:any;
 
-    data1:object[]=[];
+    data1:any={};
 
 
     ngOnInit()
@@ -49,7 +49,7 @@ export class CourseComponent  implements OnInit {
 
         this.coursename='';
         this.coursedetails='';
-        this. courseauthor='';
+        this.authorname='';
         this.authordetails='';
         this.authorimage='';
         this.price='';
@@ -77,7 +77,7 @@ export class CourseComponent  implements OnInit {
         }
 
         //update
-        saveCourse(v)
+        saveCourse()
         {
          this.courseservice.readData(this.data);
          console.log(v);

@@ -15,6 +15,7 @@ export class SubscribersComponent implements OnInit {
     email:any;
     dateofbirth:any;
     contactno:number;
+    searchTerm:string;
 
   data:object[]=[];
 
