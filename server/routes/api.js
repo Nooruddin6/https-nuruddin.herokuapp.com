@@ -19,16 +19,16 @@ app.use(bodyparser.json());
 var mongoclient=require('mongodb').MongoClient;
 
 //importing bcrypt
-var bcrypt=require('bcrypt');
+var bcrypt=require('bcryptjs');
 
 //importing moongoose for update
 var mongoose=require('mongoose');
 
-const s="likhitha";
+const s="nooruddin";
 var dbo;
 var v={};
 var pf;
-var url="mongodb://likhitha:coursewala1@ds161104.mlab.com:61104/coursewala";
+var url="mongodb://nuruddin:nuruddin1@ds239071.mlab.com:39071/coursewala";
 
 //connect with database coursewala
 mongoclient.connect(url,(err,client)=>{
