@@ -1,14 +1,14 @@
 <!-- registration form -->
 
-
-<div class="row" style="background-image:url('assets/px1.jpeg')">
+<div class="row" >
 
     <div class="col-sm-4"></div>
 
 
     <div class="col-sm-4">
 
-        <h1 class="mx-auto">Register</h1>
+        <h1 class="mx-auto mt-5">Register</h1>
+        <div class="jumbotron bg-info" >
   <form #formref="ngForm" (ngSubmit)="submit(formref.value)">
 
   <div class="form-group">
@@ -26,7 +26,7 @@
 
   <div class="form-group">
      <label><b>Password:</b></label>
-     <input type="text" name="password" id="c" #ref3="ngModel"  [(ngModel)]="password" pattern="[A-Z]\d." minlength="6" class="form-control">
+     <input type="password" name="password" id="c" #ref3="ngModel"  [(ngModel)]="password" pattern="[A-Z]\d." minlength="6" class="form-control">
      <label *ngIf="ref3.errors?.pattern && ref3.invalid"><p>First letter is capital</p>
             <p>second letter is number</p>
            <p>remaining as your wish</p>
@@ -35,7 +35,7 @@
 
   <div class="form-group">
      <label><b>ConfirmPassword:</b></label>
-     <input type="text" name="confirmpassword" #ref4="ngModel" [(ngModel)]="confirmpassword" pattern="[A-Z]\d." class="form-control">
+     <input type="password" name="confirmpassword" #ref4="ngModel" [(ngModel)]="confirmpassword" pattern="[A-Z]\d." class="form-control">
   </div>
 
   <div class="form-group">
@@ -66,4 +66,5 @@
 
     <div class="col-sm-4"></div>
 
+</div>
 </div>

@@ -11,7 +11,7 @@ import { AuthorComponent } from './author/author.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CartComponent } from './cart/cart.component';
 import { HistoryComponent } from './history/history.component';
-import{HttpClientModule} from '@angular/common/http';
+import{HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 
 import { SubscribersComponent } from './subscribers/subscribers.component';
 import { UserviewComponent } from './userview/userview.component';
@@ -21,6 +21,11 @@ import { CourseComponent } from './course/course.component';
 import { PurchasesComponent } from './purchases/purchases.component';
 import { SearchPipe } from './search.pipe';
 import { CComponent } from './c/c.component';
+import { AuthorizationService } from './authorization.service';
+import { UserhomeComponent } from './userhome/userhome.component';
+import { JavaComponent } from './java/java.component';
+import { MeanstackComponent } from './meanstack/meanstack.component';
+import { AngularComponent } from './angular/angular.component';
 
 @NgModule({
   declarations: [
@@ -40,13 +45,21 @@ import { CComponent } from './c/c.component';
     CourseComponent,
     PurchasesComponent,
     SearchPipe,
-    CComponent
+    CComponent,
+    UserhomeComponent,
+    JavaComponent,
+    MeanstackComponent,
+    AngularComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,FormsModule,HttpClientModule
   ],
-  providers: [],
+  providers: [{ provide:HTTP_INTERCEPTORS,
+                useClass:AuthorizationService,
+                multi:true}],
+                
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

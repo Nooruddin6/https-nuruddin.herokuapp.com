@@ -1,15 +1,22 @@
 
-<div class="container-fluid">
+
     <h1 class="text-center"><marquee><b>CourseWala</b></marquee></h1>
-  <nav class="navbar navbar-expand-sm  sticky-top" style="background-color:deepskyblue">
+  <nav class="navbar navbar-expand-sm  fixed-top navbar-dark bg-dark">
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#aa">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <li>
+          <a routerLink="nu" class="navbar-brand"><img src="https://thumbs.dreamstime.com/b/cw-c-w-letter-logo-shattered-broken-blue-pink-texture-desig-triangles-design-vector-illustration-91807358.jpg" height="60" width="60"></a>
+        </li>
 
-      <div id="aa" class="collapse navbar-collapse">
+        <div class="navabr-header">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#a">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+      <div id="a" class="collapse navbar-collapse">
+        
         <ul class="navbar-nav">
-          <a class="navbar-brand" href=""><img src="assets/logo.png" height="60" width="60"> </a>
+          <a class="navbar-brand" href=""> </a>
           <li class="nav-item" >
             <a routerLink="home" class="nav-link active text-white"><b>Home</b> </a>
           </li>
@@ -22,16 +29,11 @@
             <div class="dropdown">
               <a class="dropdown-toggle nav-link text-white" href="" data-toggle="dropdown"><b>Courses</b></a>
               <div class="dropdown-menu">
+                <a href="" class="dropdown-item"><b>C</b></a>
+                <a href="" class="dropdown-item"><b>Java</b></a>
+                <a href="" class="dropdown-item"><b>Angular</b></a>
+                <a href="" class="dropdown-item"><b>MEANSTACK</b></a>
 
-                <table>
-                  <tr *ngFor="let i of data;let in=index;">
-                    <td>
-                        <a routerLink="c" class="dropdown-item"><b>C</b></a>
-                        {{i.coursename}}
-                    </td>
-                  </tr>
-                </table>
-                
             
               </div>
             </div>
@@ -55,7 +57,8 @@
         </ul>
       </div>
     </nav>
-  </div>
+ 
+
 
   <div class="container-fluid">
     <router-outlet></router-outlet>

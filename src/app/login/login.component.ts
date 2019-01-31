@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
-import{LoginService} from '../login.service'
+import{LoginService} from '../login.service';
+// import * as jwt_decode from 'jwt-decode';
 
 @Component({
   selector: 'app-login',
@@ -33,4 +34,5 @@ export class LoginComponent implements OnInit {
     this.name="";
     this.password="";
   }
+  
 }

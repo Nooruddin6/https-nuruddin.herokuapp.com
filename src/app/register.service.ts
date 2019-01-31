@@ -12,7 +12,7 @@ export class RegisterService {
   getData(v)
   {
     console.log(v);
-    this.http.post('nu/register',v).subscribe(temp=>
+    this.http.post('api/nu/register',v).subscribe(temp=>
       {alert(temp)
       if(temp=="registered successfully")
       {

@@ -35,7 +35,7 @@ export class CourseComponent  implements OnInit {
     ngOnInit()
     {
       this.courseservice.read().subscribe(temp=>{this.data1=temp
-          console.log(temp);
+         // console.log(temp);
 
       })
 
@@ -58,7 +58,7 @@ export class CourseComponent  implements OnInit {
         this.mainfile='';
 
         
-        //sending data to service course
+        //sending data to service course for post
         this.courseservice.readCourse(v);
       }
 

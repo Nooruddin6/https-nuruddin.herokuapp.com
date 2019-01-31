@@ -6,17 +6,19 @@
        <table class="table table-striped">
          <thead>
 
-             <th><b>Sno</b></th>
-             <th><b>Course-Id</b></th>
-             <th><b>Course-Name</b></th>
+             
+             <th><b>CourseName</b></th>
              <th><b>Cost</b></th>
+             <th><b>Buy</b></th>
+             
              
          </thead>
-         <tr *ngFor="let i of cart">
-             <td>{{i.sno}}</td>
-             <td>{{i.courseid}}</td>
+         <tr *ngFor="let i of data">
+          
              <td>{{i.coursename}}</td>
-             <td>{{i.cost}}</td>
+             <td>{{i.price}}</td>
+             <td><button type="button" class="btn btn-success">Buy</button></td>
+
          </tr>
                     
        </table>

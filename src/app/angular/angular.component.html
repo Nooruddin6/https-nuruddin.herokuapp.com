@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row mt-5">
+      <h1 class="mx-auto" style="color:chocolate">ANGULAR</h1>
+    </div>
+    <div class="row mt-4">
+      <div class="col-sm-8">
+          <p>AngularJS is an open-source web application framework.
+              It was originally developed in 2009 by Misko Hevery and Adam Abrons.
+              It is now maintained by Google.</p>
+                
+           <ul>AngularJS is a efficient framework that can create Rich Internet Applications (RIA).</ul>
+           <ul>AngularJS provides developers an options to write client side applications using JavaScript in a clean Model View Controller (MVC) way.</ul>
+           <ul>Applications written in AngularJS are cross-browser compliant. AngularJS automatically handles JavaScript code suitable for each browser.</ul>
+           <ul>AngularJS is open source, completely free, and used by thousands of developers around the world. </ul>
+      </div>
+      <div class="col-sm-4">
+        <img src="assets/angular.png" class="mx-auto d-block" width="200px" height="200px">
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <table class="table table-striped">
+          <thead>
+            <th>coursename</th>
+            <th>price</th>
+            <th>Add</th>
+          </thead>
+          <tr *ngFor="let i of data">
+                 <td>{{i.coursename}}</td>
+                 <td>{{i.price}}</td>
+                 <td> <button type="button" (click)="addCart(i)" class="btn btn-success">AddtoCart</button></td>
+          </tr>
+        </table>
+
+      </div>
+      <div class="col-sm-3"></div>
+      
+    </div>
+
+  
+
+  <router-outlet></router-outlet>

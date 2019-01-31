@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row mt-5">
+      <h1 class="mx-auto" style="color: chocolate">JAVA</h1>
+    </div>
+    <div class="row mt-4">
+      <div class="col-sm-8">
+          <p>Java is a high-level programming language developed by Sun Microsystems. 
+            It was originally designed for developing programs for set-top boxes and handheld devices,
+             but later became a popular choice for creating web applications.</p>
+
+          <p>The Java syntax is similar to C++, but is strictly an object-oriented programming
+             language. For example, most Java programs contain classes, which are used to define objects,
+              and methods, which are assigned to individual classes. Java is also known for being more strict than C++,
+               meaning variables and functions must be explicitly defined. This means Java source code may produce errors or 
+               "exceptions" more easily than other languages, but it also limits other types of errors that may be caused by
+                undefined variables or unassigned types.</p>
+      </div>
+      <div class="col-sm-4">
+        <img src="assets/java.jpg" class="mx-auto d-block" width="200px" height="200px">
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+  </div>
+
+
+  <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <table class="table table-striped">
+          <thead>
+            <th>coursename</th>
+            <th>price</th>
+            <th>Add</th>
+          </thead>
+          <tr *ngFor="let i of data">
+                 <td>{{i.coursename}}</td>
+                 <td>{{i.price}}</td>
+                 <td> <button type="button" (click)="addCart(i)" class="btn btn-success">AddtoCart</button></td>
+          </tr>
+        </table>
+
+      </div>
+      <div class="col-sm-3"></div>
+      
+    </div>
+
+  <router-outlet></router-outlet>

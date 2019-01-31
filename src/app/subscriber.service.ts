@@ -14,7 +14,7 @@ export class SubscriberService {
   //reading data from server
   read():Observable<any>
   {
-    return this.http.get('adminview/customers');
+    return this.http.get('api/adminview/customers');
   }
 
   

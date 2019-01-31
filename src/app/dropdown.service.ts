@@ -12,13 +12,8 @@ export class DropdownService {
   //course of normaluser
   getDropDown():Observable<any>
   {
-  return this.http.get<any>('nu');
+  return this.http.get<any>('api/nu');
   }
 
-  //course of userview
-//   dropDown():Observable<any>
-//   {
-//     return this.http.get<any>('userview');
-//   }
-
+  
 }

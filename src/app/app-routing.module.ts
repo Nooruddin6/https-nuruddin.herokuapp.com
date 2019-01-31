@@ -16,6 +16,10 @@ import { AdminviewComponent } from './adminview/adminview.component';
 import { UserviewComponent } from './userview/userview.component';
 import { NuComponent } from './nu/nu.component';
 import { CComponent } from './c/c.component';
+import { UserhomeComponent } from './userhome/userhome.component';
+import { JavaComponent } from './java/java.component';
+import { AngularComponent } from './angular/angular.component';
+import { MeanstackComponent } from './meanstack/meanstack.component';
 
 
 const routes: Routes = [  {path:"nu",component:NuComponent,
@@ -24,9 +28,8 @@ const routes: Routes = [  {path:"nu",component:NuComponent,
                           {path:"authors",component:AuthorComponent},
                           {path:"login",component:LoginComponent},
                           {path:"register",component:RegisterComponent},
-                          {path:"c",component:CComponent},
-                          {path:"c/login",component:LoginComponent},
-                          {path:"login/register",component:RegisterComponent}
+                          {path:"login/register",component:RegisterComponent},
+                         
                           
                         
                          ]},
@@ -36,11 +39,21 @@ const routes: Routes = [  {path:"nu",component:NuComponent,
                           
 
                           {path:"userview",component:UserviewComponent,
-                 children:[{path:"profile",component:ProfileComponent},
-                           {path:"home",component:HomeComponent},
+                 children:[{path:"",component:UserhomeComponent},
+                           {path:"profile",component:ProfileComponent},
+                           {path:"userhome",component:UserhomeComponent},
                           {path:"cart",component:CartComponent},
                           {path:"history",component:HistoryComponent},
                           {path:"authors",component:AuthorComponent},
+                          {path:"c",component:CComponent},
+                          {path:"userhome/c",component:CComponent},
+                          {path:"java",component:JavaComponent},
+                          {path:"userhome/java",component:JavaComponent},
+                          {path:"angular",component:AngularComponent},
+                          {path:"userhome/angular",component:AngularComponent},
+                          {path:"meanstack",component:MeanstackComponent},
+                          {path:"userhome/meanstack",component:MeanstackComponent}
+
                           
                          ]},
                          

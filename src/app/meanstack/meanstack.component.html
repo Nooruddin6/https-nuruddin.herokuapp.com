@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row mt-5">
+      <h1 class="mx-auto" style="color:chocolate">MEANSTACK</h1>
+    </div>
+    <div class="row mt-4">
+      <div class="col-sm-8">
+          <p>The term MEAN stack refers to a collection of JavaScript based technologies
+             used to develop web applications. MEAN is an acronym for MongoDB, ExpressJS,
+              AngularJS and Node.js. From client to server to database, MEAN is full stack 
+              JavaScript. This article explores the basics of the MEAN stack and shows how
+               to create a simple bucket list application.</p>
+
+          <p>Node.js is a server side JavaScript execution environment. It’s a platform built on Google Chrome’s V8 JavaScript runtime. 
+            It helps in building highly scalable and concurrent applications rapidly.</p>
+
+          <p>MongoDB is a schemaless NoSQL database system. MongoDB saves data in binary JSON format which makes it easier to
+             pass data between client and server.</p>
+          
+          <P>AngularJS is a JavaScript framework developed by Google. It provides some awesome features like the two-way data binding. 
+            It’s a complete solution for rapid and awesome front end development.</P>
+
+          <p>Express is lightweight framework used to build web applications in Node. 
+            It provides a number of robust features for building single and multi page
+             web application. Express is inspired by the popular Ruby framework, Sinatra. </p>
+        
+      </div>
+      <div class="col-sm-4">
+        <img src="assets/mean.png" class="mx-auto d-block" width="200px" height="200px">
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <button type="button" class="btn btn-success">AddtoCart</button>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <table class="table table-striped">
+          <thead>
+            <th>coursename</th>
+            <th>price</th>
+            <th>Add</th>
+          </thead>
+          <tr *ngFor="let i of data">
+                 <td>{{i.coursename}}</td>
+                 <td>{{i.price}}</td>
+                 <td> <button type="button" (click)="addCart(i)" class="btn btn-success">AddtoCart</button></td>
+          </tr>
+        </table>
+
+      </div>
+      <div class="col-sm-3"></div>
+      
+    </div>
+
+  <router-outlet></router-outlet>

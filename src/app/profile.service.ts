@@ -12,7 +12,7 @@ export class ProfileService {
   //reading profiledata from server.js 
   readProfile():Observable<any>
   {
-    return this.http.get('userview/profile');
+    return this.http.get('api/userview/profile');
   }
 
   
@@ -20,7 +20,7 @@ export class ProfileService {
 
   readSaveProfile(v)
   {
-    this.http.put('userview/profile',v).subscribe();
+    this.http.put('api/userview/profile',v).subscribe();
     console.log(v);
   }
 

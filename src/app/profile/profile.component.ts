@@ -18,7 +18,7 @@ dateofbirth:any;
 contactno:number;
 
  
-  data:any={};
+  data:any[];
     
   profiledata:any={};
 

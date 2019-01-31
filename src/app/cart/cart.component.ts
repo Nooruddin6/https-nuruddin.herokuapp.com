@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-cart',
@@ -7,13 +8,14 @@ import { DataService } from '../data.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-   cart:object[]=[];
+   data:object[]=[];
 
-  constructor(private dataservice:DataService) { }
+  constructor(private http:HttpClient) { }
 
   ngOnInit()
    {
-    return this.dataservice.getCart().subscribe(temp=>{this.cart=temp;})
+    this.http.get<any>('api/userview/cart').subscribe(temp=>{this.data=temp})
    }
+
 
 }

@@ -1,46 +1,58 @@
-<nav class="navbar navbar-expand-sm mt-5 bg-light">
-  <ul class="navbar nav">
-      <li>
-        <a routerLink="userview" class="navbar-brand"><b>Logo</b></a>
+<nav class="navbar navbar-expand-sm mt-5 bg-dark navbar-dark">
+       <li>
+        <a routerLink="userview" class="navbar-brand"><img src="https://thumbs.dreamstime.com/b/cw-c-w-letter-logo-shattered-broken-blue-pink-texture-desig-triangles-design-vector-illustration-91807358.jpg" height="60" width="60"></a>
       </li>
 
+   
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#a">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+   
+
+      <div id="a"  class="collapse navbar-collapse">
+
+    <ul class="navbar-nav">
+     
+
     <li class="nav-item">
-      <a class="nav-link" routerLink="profile"><b>Profile</b></a>
+      <a class="nav-link text-white" routerLink="profile"><b>Profile</b></a>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" routerLink="home"><b>Home</b></a>
+      <a class="nav-link text-white" routerLink="userhome"><b>Home</b></a>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" routerLink="cart"><b>Cart</b></a>
+      <a class="nav-link text-white" routerLink="cart"><b>Cart</b></a>
     </li>
+
     <li class="nav-item">
-      <a class="nav-link" routerLink="history"><b>PurchaseHistory</b></a>
+      <a class="nav-link text-white" routerLink="history"><b>PurchaseHistory</b></a>
     </li>
+
     <li class="nav-item">
       <div class="dropdown">
-        <a class="dropdown-toggle nav-link" href="" data-toggle="dropdown"><b>Courses</b></a>
+        <a class="dropdown-toggle nav-link text-white" href="" data-toggle="dropdown"><b>Courses</b></a>
         <div class="dropdown-menu">
-          <!-- <table>
-            <tr *ngFor="let i of data;let in=index">
-              <td>
-                  <a routerLink="c" class="dropdown-item"><b>C</b></a>
-                  {{i.coursename}}
-              </td>
-            </tr>
-          </table>
-           -->
+            <a href="" class="dropdown-item"><b>C</b></a>
+            <a href="" class="dropdown-item"><b>Java</b></a>
+            <a href="" class="dropdown-item"><b>Angular</b></a>
+            <a href="" class="dropdown-item"><b>MEANSTACK</b></a>
            
         </div>
       </div>
     </li>
+
     <li class="nav-item">
-      <a style="margin-right:200px;"class="nav-link" routerLink="authors"><b>Authors</b></a>
+      <a class="nav-link text-white" routerLink="authors"><b>Authors</b></a>
     </li>
-    <a routerLink="">
-    <button type="button" class="btn btn-success ml-5"><b>LogOut</b></button>
-    </a>
+
+     <li>
+      <a class="nav-link text-white" (click)="logout()"><b>Logout</b></a>
+     </li>
+    
   </ul>
+</div>
 </nav>
+
 <router-outlet></router-outlet>

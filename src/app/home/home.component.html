@@ -3,7 +3,7 @@
        <div id="carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
              <div class="carousel-item active">
-               <img src="assets/carousel3.jpg" class="img-fluid" height="500px" width="1080px">
+               <img src="assets/carousel3.jpg" class="img-fluid" height="400px" width="1080px">
              </div>
              <div class="carousel-caption">
                <h4><marquee><b>"Online learning is not the next big thing,it is the easy thing."</b></marquee></h4>
@@ -55,17 +55,10 @@
            </div>
                           
          </div>
-        <div class="card">
-        <div class="card-body">
-            <img src="assets/c++.jpg" height="100px" width="120px" class="image-fluid">
-            <p><b>Welcome to c++</b></p>
-            <button type="button" data-toggle="modal" data-target="#cc" class="btn btn-success"><b>Show</b></button>
-           
-       </div>
-       </div>
+       
        <div class="card">
        <div class="card-body">
-             <img src="assets/java.jpg"height="100px" width="120px" class="image-fluid">
+             <img src="assets/java.jpg"height="120px" width="120px" class="image-fluid">
              <p><b>Welcome to Java</b></p>
             <button type="button"  data-toggle="modal" data-target="#java" class="btn btn-success"><b>Show</b></button>
        </div>
@@ -77,11 +70,12 @@
             <button type="button"  data-toggle="modal" data-target="#angular" class="btn btn-success"><b>Show</b></button>
        </div>
        </div>
+
        <div class="card">
       <div class="card-body">
         <img src="assets/mean.png" height="100px" width="100px" class="image-fluid">
         <p><b>Welcome to MEANSTACK</b></p>
-        <button type="button"  data-toggle="modal"   data-target="#log" class="btn btn-success"><b>Show</b></button>
+        <button type="button"  data-toggle="modal"   data-target="#meanstack" class="btn btn-success"><b>Show</b></button>
      </div>
     </div>
 </div>
@@ -112,4 +106,118 @@
          </div>
          </div>
          
+         <!-- //models of carddecks -->
+            <!-- model of c -->
+         <div class="modal" id="c">
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" data-dismiss="modal" class="close">X</button>
+               </div>
+               <div class="modal-body">
+                  <h1 style="color:chocolate" class="text-center">C</h1>
+                <p>C is a general-purpose, procedural, imperative computer programming language developed in 1972 by Dennis M. Ritchie 
+                  at the Bell Telephone Laboratories to develop the UNIX operating system.  C is the most widely used computer language.
+                  It keeps fluctuating at number one scale of popularity along with Java programming language,
+                   which is also equally popular and most widely used among modern software programmers.</p>
+                <p>Prerequisites Before proceeding with this tutorial, you should have a basic understanding of Computer Programming terminologies.
+                     A basic understanding of any of the programming languages will help you in understanding the C programming concepts 
+                     and move fast on the learning track.</p>
+
+                     <button type="button" class="btn btn-success float-right"data-dismiss="modal" (click)="add()">AddtoCart</button>
+               </div>
+              
+             </div>
+           </div>
+         </div>
+
+
+         <!-- model of java -->
+         <div class="modal" id="java">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" data-dismiss="modal" class="close">X</button>
+              </div>
+              <div class="modal-body">
+                  <h1 style="color:chocolate" class="text-center">JAVA</h1>
+               <p>Java is a high-level programming language developed by Sun Microsystems.
+                  It was originally designed for developing programs for set-top boxes and handheld devices,
+                   but later became a popular choice for creating web applications.</p>
+                    
+                <p>The Java syntax is similar to C++, but is strictly an object-oriented programming language.
+                   For example, most Java programs contain classes, which are used to define objects, and methods, 
+                   which are assigned to individual classes. 
+                   Java is also known for being more strict than C++, 
+                  meaning variables and functions must be explicitly defined. </p>
+
+              <button type="button" class="btn btn-success float-right" data-dismiss="modal"(click)="add()">AddtoCart</button>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+
+
+      <!-- model of angular -->
+      <div class="modal" id="angular">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" data-dismiss="modal" class="close">X</button>
+              </div>
+              <div class="modal-body">
+                  <h1 style="color:chocolate" class="text-center">ANGULAR</h1>
+               <p>AngularJS is an open-source web application framework.
+                  It was originally developed in 2009 by Misko Hevery and Adam Abrons.
+                  It is now maintained by Google.</p>
+                    
+               <ul>AngularJS is a efficient framework that can create Rich Internet Applications (RIA).</ul>
+               <ul>AngularJS provides developers an options to write client side applications using JavaScript in a clean Model View Controller (MVC) way.</ul>
+               <ul>Applications written in AngularJS are cross-browser compliant. AngularJS automatically handles JavaScript code suitable for each browser.</ul>
+               <ul>AngularJS is open source, completely free, and used by thousands of developers around the world. </ul>
+
+              <button type="button" class="btn btn-success float-right"data-dismiss="modal" (click)="add()">AddtoCart</button>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+
+        <!-- modal of meanstack -->
+
+
+      <div class="modal" id="meanstack">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" data-dismiss="modal" class="close">X</button>
+              </div>
+              <div class="modal-body">
+                <h1 style="color:chocolate" class="text-center">MEANSTACK</h1>
+               <p>The term MEAN stack refers to a collection of JavaScript based technologies used to
+                  develop web applications. MEAN is an acronym for MongoDB, ExpressJS, AngularJS and Node.js. 
+                  From client to server to database, MEAN is full stack JavaScript. This article explores the
+                   basics of the MEAN stack and shows how to create a simple bucket list application.</p>
+                    
+               <p>Node.js is a server side JavaScript execution environment. 
+                  It’s a platform built on Google Chrome’s V8 JavaScript runtime. </p>
+
+              <p>Express is lightweight framework used to build web applications in Node.
+                 It provides a number of robust features for building single and multi page web application. </p>
+              
+              <p>MongoDB is a schemaless NoSQL database system.
+                 MongoDB saves data in binary JSON format which makes it 
+                easier to pass data between client and server.</p>
+              
+              <P>AngularJS is a JavaScript framework developed by Google.
+                 It provides some awesome features like the two-way data binding.</P>
+
+              <button type="button" class="btn btn-success float-right" data-dismiss="modal" (click)="add()">AddtoCart</button>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+
           <router-outlet></router-outlet> -->

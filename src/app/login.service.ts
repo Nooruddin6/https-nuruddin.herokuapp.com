@@ -12,13 +12,28 @@ export class LoginService {
   readLogin(v)
   {
     console.log(v);
-    this.http.post('nu/login',v).subscribe(temp=>{
-      alert(temp)
-      console.log(temp)
-        if(temp=="login successful")
-        {
-        this.router.navigate(["userview"]);
-        }
+    this.http.post('api/nu/login',v).subscribe(res=>{
+
+      console.log(res);
+
+      localStorage.setItem('id_token',res['idToken']);
+
+      if(res=="wrong password")
+      {
+        alert('wrong password')
+        this.router.navigate(["login"]);
+      }
+      else if(res=="user not existed")
+      {
+        alert('user not existed')
+        this.router.navigate(["login"]);
+      }
+      else
+      {
+        this.router.navigate(['userview']);
+      }
+
+       
         
     });
   }
